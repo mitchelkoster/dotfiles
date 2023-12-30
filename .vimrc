@@ -25,6 +25,10 @@ set noswapfile
 " Remove error sounds
 set noerrorbells
 
+" no visual bell & flash
+" Also required for TMUX & VIM combo
+set vb t_vb=
+
 " Enable type file detection
 filetype on
 
