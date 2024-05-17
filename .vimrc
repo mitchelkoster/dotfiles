@@ -15,6 +15,10 @@ nnoremap N Nzz
 "
 "
 
+" Copy to clipboard register by default
+set clipboard=unnamedplus
+set clipboard+=unnamed
+
 " Disable compatibility with VI
 set nocompatible
 
@@ -102,6 +106,7 @@ set hlsearch
 "
 
 " Detect if running in TMUX for VIM pane navigation
+" Detect if running in TMUX for VIM pane navigation
 if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
     let previous_winnr = winnr()
@@ -126,4 +131,3 @@ else
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 endif
-
