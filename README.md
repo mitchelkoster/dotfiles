@@ -8,6 +8,7 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
 ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -s ~/.dotfiles/.keybindings.zsh ~/.keybindings.zsh
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ```
 
