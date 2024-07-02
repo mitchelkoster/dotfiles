@@ -1,0 +1,19 @@
+[font]
+size = 12.0
+
+[font.bold]
+family = "JetbrainsMono NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetbrainsMono NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetbrainsMono NF"
+style = "Italic"
+
+[font.normal]
+family = "JetbrainsMono NF"
+style = "Regular"
+
