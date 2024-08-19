@@ -1,3 +1,7 @@
+# Env variables
+export PATH="$PATH:$HOME/.local/bin"
+export EDITOR="vim"
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -slah --color"
@@ -117,3 +121,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Shell integrations
 eval "$(fzf --zsh)" # Initiate fuzzy search with CTRL + r
+
+# Created by `pipx` on 2024-07-15 08:03:32
+export PATH="$PATH:/home/mitchel/.local/bin"
