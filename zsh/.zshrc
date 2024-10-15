@@ -1,7 +1,12 @@
+# Env variables
+export PATH="$PATH:$HOME/.local/bin"
+export EDITOR="vim"
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -slah --color"
 alias update="sudo apt update -y; sudo apt upgrade -y; sudo apt dist-upgrade -y; sudo apt autoclean -y; sudo apt auto-remove -y"
+alias fix_zsh="mv .zsh_history .zsh_history_bad;strings .zsh_history_bad > .zsh_history;fc -R .zsh_history;rm ~/.zsh_history_bad"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -74,3 +79,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Shell integrations
 eval "$(fzf --zsh)" # Initiate fuzzy search with CTRL + r
+
+# Created by `pipx` on 2024-07-15 08:03:32
+export PATH="$PATH:/home/mitchel/.local/bin"
