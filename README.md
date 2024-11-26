@@ -24,6 +24,12 @@ sudo apt install xclip
 
 Once complete initialize a tmux session and load the confighruation with `<PREFIX> + I` and reload with ` <PREFIX> + r`.
 
+**Note:** If you ever need to reset the path to a session use:
+
+```bash
+:attach-session -t . -c '#{pane_current_path}'
+```
+
 ## Configuring zsh
 For *zsh* in order to function `zsh` as well as `git` needs to be installed. The `fzf` program is included for *fuzzy searching* of history/files.
 
