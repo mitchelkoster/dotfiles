@@ -3,6 +3,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export EDITOR="vim"
 
 # Aliases
+alias sail="bash vendor/bin/sail"
 alias ls="ls --color"
 alias ll="ls -slah --color"
 alias update="sudo apt update -y; sudo apt upgrade -y; sudo apt dist-upgrade -y; sudo apt autoclean -y; sudo apt auto-remove -y"
@@ -33,8 +34,13 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Load Keyboard bindings if available
-[[ ! -f ~/.keybindings.zsh ]] || source ~/.keybindings.zsh
+# Use VIM key bindings
+# bindkey -v
+
+# Custom key bindings
+#[[ ! -f ~/.keybindings.zsh ]] || source ~/.keybindings.zsh
+bindkey "^[[1;5D" backward-word # CTRL + Left arrow
+bindkey "^[[1;5C" forward-word # CTRL + Right arrow
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -54,9 +60,8 @@ autoload -Uz compinit
 compinit
 
 # History Keybindings; Initialize with CTRL + r
-bindkey -e
 bindkey '^p' history-search-backward # Navigate with CTRL + p
-bindkey '^n' history-search-forward # Navigate with CTRL + p
+bindkey '^n' history-search-forward # Navigate with CTRL + n
 
 # History
 HISTSIZE=5000
