@@ -35,7 +35,8 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Use VIM key bindings
-# bindkey -v
+bindkey -v
+bindkey -M viins "jk" vi-cmd-mode
 
 # Custom key bindings
 #[[ ! -f ~/.keybindings.zsh ]] || source ~/.keybindings.zsh
