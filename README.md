@@ -1,6 +1,24 @@
 # Personal .dotfiles
 My personal software configuration.
 
+```bash
+# Install dependencies
+sudo apt install stow \
+   zsh \ 
+   vim \ 
+   nvim \ 
+   zsh \ 
+   xclip \ 
+   git \ 
+   fzf
+
+# Install TMUX plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Switch shell to ZSH
+chsh -s $(which zsh)
+```
+
 To copy over configurations for the applications create the desired symlinks.
 
 ```bash
