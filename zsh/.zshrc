@@ -86,7 +86,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Shell integrations
-eval "$(fzf --zsh)" # Initiate fuzzy search with CTRL + r
+eval "$(fzf --zsh)" # Initiate fuzzy search
+eval "$(zoxide init --cmd cd zsh)" # Initate zioxide
 
 # Created by `pipx` on 2024-07-15 08:03:32
 export PATH="$PATH:/home/mitchel/.local/bin"
