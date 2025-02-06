@@ -2,10 +2,15 @@
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR="vim"
 
-# Aliases
+# Aliases for development
 alias sail="bash vendor/bin/sail"
+
+# Aliasses for general terminal use
 alias l="grc ls -slah --color"
+alias cls="clear"
 alias ..="cd ../"
+alias ...="cd ../"
+alias ....="cd ../"
 alias update="sudo apt update -y; sudo apt upgrade -y; sudo apt dist-upgrade -y; sudo apt autoclean -y; sudo apt auto-remove -y"
 alias fix_zsh="mv .zsh_history .zsh_history_bad;strings .zsh_history_bad > .zsh_history;fc -R .zsh_history;rm ~/.zsh_history_bad"
 
@@ -89,5 +94,3 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 eval "$(fzf --zsh)" # Initiate fuzzy search
 eval "$(zoxide init --cmd cd zsh)" # Initate zioxide
 
-# Created by `pipx` on 2024-07-15 08:03:32
-export PATH="$PATH:/home/mitchel/.local/bin"
