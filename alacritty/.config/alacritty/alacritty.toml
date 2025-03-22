@@ -1,4 +1,3 @@
-import = [".config/alacritty/themes/dracula.toml"]
 
 [font]
 size = 12.0
@@ -18,4 +17,7 @@ style = "Italic"
 [font.normal]
 family = "JetbrainsMono NF"
 style = "Regular"
+
+[general]
+import = ["~/.config/alacritty/themes/dracula.toml"]
 
