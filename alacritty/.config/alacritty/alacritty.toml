@@ -18,6 +18,9 @@ style = "Italic"
 family = "JetbrainsMono NF"
 style = "Regular"
 
+[window]
+opacity = 0.9
+
 [general]
 import = ["~/.config/alacritty/themes/dracula.toml"]
 
