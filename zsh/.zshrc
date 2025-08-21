@@ -1,6 +1,9 @@
 # Env variables
 export PATH="$PATH:$HOME/.local/bin"
+export PATH=$PATH:/usr/local/go/bin
 export EDITOR="vim"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Aliases for development
 alias sail="bash vendor/bin/sail"
