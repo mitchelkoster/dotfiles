@@ -10,6 +10,7 @@ alias sail="bash vendor/bin/sail"
 
 # Aliasses for general terminal use
 alias l="grc ls -slah --color"
+alias v="nvim"
 alias cls="clear"
 alias ..="cd ../"
 alias ...="cd ../../"
@@ -45,11 +46,6 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 # Use VIM key bindings
 bindkey -v
 bindkey -M viins "jk" vi-cmd-mode
-
-# Custom key bindings
-#[[ ! -f ~/.keybindings.zsh ]] || source ~/.keybindings.zsh
-bindkey "^[[1;5D" backward-word # CTRL + Left arrow
-bindkey "^[[1;5C" forward-word # CTRL + Right arrow
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
