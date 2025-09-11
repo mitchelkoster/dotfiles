@@ -19,6 +19,7 @@ alias update="sudo apt update -y; sudo apt upgrade -y; sudo apt dist-upgrade -y;
 alias fix_zsh="mv .zsh_history .zsh_history_bad;strings .zsh_history_bad > .zsh_history;fc -R .zsh_history;rm ~/.zsh_history_bad"
 
 # If Podman is installed, alias Docker to Podman
+export DOCKER_HOST="unix:///run/user/$(id -u)/podman/podman.sock"
 if command -v podman &> /dev/null; then
 	alias docker=podman
 fi
