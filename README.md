@@ -10,14 +10,15 @@ sudo apt install stow \
    zsh \ 
    vim \ 
    nvim \ 
-   zsh \ 
    xclip \ 
    git \ 
    fzf \
    make \
    gcc \
    ripgrep \
-   unzip
+   unzip \
+   lsd \
+   alacritty
 ```
 
 Some tools will have to (likely) be installed outside of the package manager.
