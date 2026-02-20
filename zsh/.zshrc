@@ -5,11 +5,9 @@ export EDITOR="vim"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Aliases for development
-alias sail="bash vendor/bin/sail"
-
 # Aliasses for general terminal use
-alias l="grc ls -slah --color"
+#alias l="grc ls -slah --color"
+alias l="lsd -lah"
 alias v="nvim"
 alias cls="clear"
 alias ..="cd ../"
@@ -18,11 +16,11 @@ alias ....="cd ../../../"
 alias update="sudo apt update -y; sudo apt upgrade -y; sudo apt dist-upgrade -y; sudo apt autoclean -y; sudo apt auto-remove -y"
 alias fix_zsh="mv .zsh_history .zsh_history_bad;strings .zsh_history_bad > .zsh_history;fc -R .zsh_history;rm ~/.zsh_history_bad"
 
-# If Podman is installed, alias Docker to Podman
-export DOCKER_HOST="unix:///run/user/$(id -u)/podman/podman.sock"
-if command -v podman &> /dev/null; then
-	alias docker=podman
-fi
+## If Podman is installed, alias Docker to Podman
+#export DOCKER_HOST="unix:///run/user/$(id -u)/podman/podman.sock"
+#if command -v podman &> /dev/null; then
+#	alias docker=podman
+#fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -99,3 +97,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 eval "$(fzf --zsh)" # Initiate fuzzy search
 eval "$(zoxide init --cmd cd zsh)" # Initate zioxide
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
