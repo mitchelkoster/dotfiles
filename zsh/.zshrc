@@ -1,27 +1,37 @@
 # Env variables
 export PATH="$PATH:$HOME/.local/bin"
-export PATH=$PATH:/usr/local/go/bin
 export EDITOR="vim"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Aliases for development
-alias sail="bash vendor/bin/sail"
-
-# Aliasses for general terminal use
-alias l="grc ls -slah --color"
+# Common alias
+alias bat="batcat"
 alias v="nvim"
 alias cls="clear"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
-alias update="sudo apt update -y; sudo apt upgrade -y; sudo apt dist-upgrade -y; sudo apt autoclean -y; sudo apt auto-remove -y"
 alias fix_zsh="mv .zsh_history .zsh_history_bad;strings .zsh_history_bad > .zsh_history;fc -R .zsh_history;rm ~/.zsh_history_bad"
+command -v batcat &>/dev/null && alias bat="batcat"
+if command -v lsd &>/dev/null; then
+	alias l="lsd -lah"
+else
+	alias l="grc ls -slah --color"
+fi
 
-# If Podman is installed, alias Docker to Podman
-export DOCKER_HOST="unix:///run/user/$(id -u)/podman/podman.sock"
-if command -v podman &> /dev/null; then
-	alias docker=podman
+# Update OS
+update() {
+if command -v apt &>/dev/null; then
+	sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y
+elif command -v dnf &>/dev/null; then
+	sudo dnf upgrade -y && sudo dnf autoremove -y
+fi
+	command -v flatpak &>/dev/null && flatpak update -y
+}
+
+# Source any machine specifc settings if need be
+if [[ -f ~/.zshrc.local ]]; then
+	source ~/.zshrc.local
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
