@@ -54,28 +54,28 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Completions first (needed before compinit)
 zinit light zsh-users/zsh-completions
 
-# OMZ snippets
+# OMZ snippets (lazy load)
 zinit ice wait lucid; zinit snippet OMZP::git
 zinit ice wait lucid; zinit snippet OMZP::sudo
 zinit ice wait lucid; zinit snippet OMZP::command-not-found
 zinit ice wait lucid; zinit snippet OMZP::aliases
 
-# ZSH plugins
+# ZSH plugins (lazy load)
 zinit ice wait lucid; zinit light Aloxaf/fzf-tab
 zinit ice wait lucid; zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid; zinit light akash329d/zsh-alias-finder
 
-# Syntax highlighting last
+# Syntax highlighting last (lazy load)
 zinit ice wait lucid; zinit light zdharma-continuum/fast-syntax-highlighting
 
 # ===============================================================
-# COMPLETIONS
+# COMPLETIONS (
 # ===============================================================
 autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-	compinit
+	compinit # Rebuild if cache is older than 24 hours
 else
-	compinit -C
+	compinit -C # Use cache
 fi
 
 # ===============================================================
