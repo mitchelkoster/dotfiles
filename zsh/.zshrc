@@ -9,7 +9,11 @@ fi
 # ENVIRONMENT VARIABLES
 # ===============================================================
 export PATH="$PATH:$HOME/.local/bin"
-export EDITOR="vim"
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR="nvim"
+else
+    export EDITOR="vim"
+fi
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 

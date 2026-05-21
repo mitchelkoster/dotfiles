@@ -48,7 +48,7 @@ style = "Bold Italic"
 # ==============================================================
 [window]
 opacity = 0.90
-decorations = "none"        # "full" | "none" | "transparent" (macOS)
+decorations = "full"        # "full" | "none" | "transparent" (macOS)
 dynamic_padding = true      # center content when window is resized
 
 [window.padding]
