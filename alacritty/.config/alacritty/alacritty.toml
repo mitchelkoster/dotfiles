@@ -6,11 +6,11 @@ live_config_reload = true
 [keyboard]
 bindings = [
 	# Vi mode (navigate output like vim)
-	{ key = "Space", mods = "Control|Shift", action = "ToggleViMode" },
+	{ key = "LBracket", mods = "Control", action = "ToggleViMode" },
 
 	# Scroll in vi-style without entering vi mode
-	{ key = "U", mods = "Control|Shift", action = "ScrollHalfPageUp" },
-	{ key = "D", mods = "Control|Shift", action = "ScrollHalfPageDown" },
+	{ key = "U", mods = "Control", action = "ScrollHalfPageUp" },
+	{ key = "D", mods = "Control", action = "ScrollHalfPageDown" },
 
 	# Font size
 	{ key = "=", mods = "Control", action = "IncreaseFontSize" },
