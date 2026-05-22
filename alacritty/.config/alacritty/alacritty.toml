@@ -5,20 +5,20 @@ live_config_reload = true
 
 [keyboard]
 bindings = [
-	# Vi mode (navigate output like vim)
-	{ key = "LBracket", mods = "Control", action = "ToggleViMode" },
+  # Vi mode (navigate output like vim)
+  { key = "LBracket", mods = "Control", action = "ToggleViMode" },
 
-	# Scroll in vi-style without entering vi mode
-	{ key = "U", mods = "Control", action = "ScrollHalfPageUp" },
-	{ key = "D", mods = "Control", action = "ScrollHalfPageDown" },
+  # Scroll in vi-style (mode = "Vi" prevents conflict with vim's own Ctrl+U/D)
+  { key = "U", mods = "Control", action = "ScrollHalfPageUp", mode = "Vi" },
+  { key = "D", mods = "Control", action = "ScrollHalfPageDown", mode = "Vi" },
 
-	# Font size
-	{ key = "=", mods = "Control", action = "IncreaseFontSize" },
-	{ key = "-", mods = "Control", action = "DecreaseFontSize" },
-	{ key = "0", mods = "Control", action = "ResetFontSize" },
+  # Font size
+  { key = "=", mods = "Control", action = "IncreaseFontSize" },
+  { key = "-", mods = "Control", action = "DecreaseFontSize" },
+  { key = "0", mods = "Control", action = "ResetFontSize" },
 
-	# New instance
-	{ key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+  # New instance
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
 ]
 
 # ==============================================================
@@ -48,15 +48,15 @@ style = "Bold Italic"
 # ==============================================================
 [window]
 opacity = 0.90
-decorations = "full"        # "full" | "none" | "transparent" (macOS)
-dynamic_padding = true      # center content when window is resized
+decorations = "full"   # "full" | "none" | "transparent" (macOS)
+dynamic_padding = true # center content when window is resized
 
 [window.padding]
 x = 0
 y = 0
 
 [window.dimensions]
-columns = 0   # 0 = use system default
+columns = 0 # 0 = use system default
 lines = 0
 
 # ==============================================================
@@ -72,4 +72,3 @@ history = 10000
 style = { shape = "Block", blinking = "On" }
 blink_interval = 1000
 unfocused_hollow = true
-

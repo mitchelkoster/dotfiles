@@ -38,7 +38,7 @@ To copy over configurations for the applications, create the desired symlinks.
 ```bash
 stow tmux
 stow vim
-stow nvim
+stow neovim
 stow zsh
 stow alacritty
 ```
@@ -69,4 +69,4 @@ For *zsh* to function, `zsh` and `git` need to be installed. The `fzf` program i
 ### Neovim
 For *neovim* to function, some other libraries need to be installed.
 
-> This configuration is based on [kickstart](https://github.com/nvim-lua/kickstart.nvim) and uses [neovim](https://github.com/neovim/neovim).
+> This configuration is based on [LazyVim](https://www.lazyvim.org/) and uses [neovim](https://github.com/neovim/neovim).
