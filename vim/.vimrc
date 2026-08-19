@@ -19,6 +19,9 @@ nnoremap N Nzz
 set clipboard=unnamedplus
 set clipboard+=unnamed
 
+" Make creating hidden buffers easier
+set hidden
+
 " Disable compatibility with VI
 set nocompatible
 
