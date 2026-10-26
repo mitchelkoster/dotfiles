@@ -1,4 +1,9 @@
 # ===============================================================
+# Native ZSH configuration
+# ===============================================================
+zle_highlight=('paste:underline')
+
+# ===============================================================
 # POWERLEVEL10K INSTANT PROMPT (must be first)
 # ===============================================================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -8,7 +13,7 @@ fi
 # ===============================================================
 # ENVIRONMENT VARIABLES
 # ===============================================================
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/Scripts"
 if command -v nvim >/dev/null 2>&1; then
     export EDITOR="nvim"
 else
@@ -65,12 +70,12 @@ zinit ice wait lucid; zinit snippet OMZP::command-not-found
 zinit ice wait lucid; zinit snippet OMZP::aliases
 
 # ZSH plugins (lazy load)
+zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid; zinit light Aloxaf/fzf-tab
-zinit ice wait lucid; zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid; zinit light akash329d/zsh-alias-finder
 
 # Syntax highlighting last (lazy load)
-zinit ice wait lucid; zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 # ===============================================================
 # COMPLETIONS (
